@@ -74,7 +74,9 @@ const handleSubmit = async (e) => {
 
 	loader(messageDiv);
 
-	const response = await fetch("https://our-bitch.onrender.com", {
+	// https://our-bitch.onrender.com
+
+	const response = await fetch("http://localhost:7070", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",

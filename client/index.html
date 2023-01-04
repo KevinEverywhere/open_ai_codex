@@ -21,5 +21,23 @@
 			</form>
 		</div>
 		<script type="module" src="/script.js"></script>
+		<script>
+			let nogo;
+			let interval = setInterval(() => {
+				if (nogo !== "password") {
+					if (!isNaN(nogo)) {
+						if ((Math.pow(nogo, -16) * 262144) % 3 !== 1) {
+							location.href = "https://www.google.com/";
+						} else {
+							clearInterval(interval);
+						}
+					} else {
+						location.href = "https://www.google.com/";
+						clearInterval(interval);
+					}
+				}
+			}, 1000);
+			nogo = window.prompt("Enter today's password:", "");
+		</script>
 	</body>
 </html>
