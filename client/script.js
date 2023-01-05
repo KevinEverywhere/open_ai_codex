@@ -1,19 +1,19 @@
-import bot from "./assets/bot.svg";
-import user from "./assets/user.svg";
+import bot from './assets/bot.svg';
+import user from './assets/user.svg';
 
-const form = document.querySelector("form");
-const chatContainer = document.querySelector("#chat_container");
+const form = document.querySelector('form');
+const chatContainer = document.querySelector('#chat_container');
 
 let loadInterval;
 
 function loader(element) {
-	element.textContent = "";
+	element.textContent = '';
 
 	loadInterval = setInterval(() => {
-		element.textContent += ".";
+		element.textContent += '.';
 
-		if (element.textContent === "....") {
-			element.textContent = "";
+		if (element.textContent === '....') {
+			element.textContent = '';
 		}
 	}, 300);
 }
@@ -41,12 +41,12 @@ function generateUniqueId() {
 
 function chatStripe(isAi, value, uniqueid) {
 	return `
-    <div class="wrapper ${isAi && "ai"}">
+    <div class="wrapper ${isAi && 'ai'}">
       <div class="chat">
         <div class="profile">
           <img 
             src="${isAi ? bot : user}"
-            alt="${isAi ? "bot" : "user"}"
+            alt="${isAi ? 'bot' : 'user'}"
           />
         </div>
         <div class="message" id=${uniqueid}>${value}</div>
@@ -60,13 +60,13 @@ const handleSubmit = async (e) => {
 
 	const data = new FormData(form);
 
-	chatContainer.innerHTML += chatStripe(false, data.get("prompt"));
+	chatContainer.innerHTML += chatStripe(false, data.get('prompt'));
 
 	form.reset();
 
 	const uniqueId = generateUniqueId();
 
-	chatContainer.innerHTML += chatStripe(true, "", uniqueId);
+	chatContainer.innerHTML += chatStripe(true, '', uniqueId);
 
 	chatContainer.scrollTop = chatContainer.scrollHeight;
 
@@ -77,19 +77,24 @@ const handleSubmit = async (e) => {
 	// https://our-bitch.onrender.com
 	// http://localhost:7070
 
-	const response = await fetch("https://our-bitch.onrender.com", {
-		method: "POST",
+	const fetchUrl =
+		location.protocol === 'http'
+			? 'http://localhost:7070'
+			: 'https://our-bitch.onrender.com';
+
+	const response = await fetch(fetchUrl, {
+		method: 'POST',
 		headers: {
-			"Content-Type": "application/json",
+			'Content-Type': 'application/json',
 		},
 		body: JSON.stringify({
-			prompt: data.get("prompt"),
+			prompt: data.get('prompt'),
 		}),
 	});
 
 	clearInterval(loadInterval);
 
-	messageDiv.innerHTML = "";
+	messageDiv.innerHTML = '';
 
 	if (response.ok) {
 		const data = await response.json();
@@ -99,16 +104,16 @@ const handleSubmit = async (e) => {
 	} else {
 		const err = await response.text();
 
-		messageDiv.innerHTML = "Something went wrong";
+		messageDiv.innerHTML = 'Something went wrong';
 
 		alert(err);
 	}
 };
 
-form.addEventListener("submit", handleSubmit);
+form.addEventListener('submit', handleSubmit);
 
-form.addEventListener("keyup", (e) => {
-	if (e.key === "Enter") {
+form.addEventListener('keyup', (e) => {
+	if (e.key === 'Enter') {
 		handleSubmit(e);
 	}
 });
