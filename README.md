@@ -1,10 +1,16 @@
-# OpenAI API Quickstart - Node.js example app
+# our-bitch, chatGPT app
 
-This is an example pet name generator app used in the OpenAI API [quickstart tutorial](https://beta.openai.com/docs/quickstart). It uses the [Next.js](https://nextjs.org/) framework with [React](https://reactjs.org/). Check out the tutorial or follow the instructions below to get set up.
+## What it Does:
+
+This application was built to provide me assistance to quickly achieve programming tasks. When I do not have the time or knowhow to scaffold code for specifice , I wanted to rely on an application to do this for me.
+
+# Implementation of a ChatGPT AI Application
+
+This app was baded on a video, [Build and Deploy Your Own ChatGPT AI App ...](https://www.youtube.com/watch?v=2FeymQoKvrk). It uses [OpenAI API](https://openai.com/api/). I later found its source code in [Adrian Hajdin's GitHub Repo](https://github.com/adrianhajdin/project_openai_codex):
 
 ## Setup
 
-1. If you don’t have Node.js installed, [install it from here](https://nodejs.org/en/)
+1. If you don’t have Node.js installed, [install it from here](https://nodejs.org/)
 
 2. Clone this repository
 
@@ -14,32 +20,18 @@ This is an example pet name generator app used in the OpenAI API [quickstart tut
    $ cd openai-quickstart-node
    ```
 
-4. Install the requirements
+4. Create an account and API key here [OpenAI API](https://openai.com/api/)
 
-   ```bash
-   $ npm install
+5. Create .env file and assign OPENAI_API_KEY to [API key](https://beta.openai.com/account/api-keys)
+
+.env
+
+```
+OPENAI_API_KEY=API_KEY
+```
+
+6. When you run npm start, the application first installs dependencies and then starts the client and server apps.
    ```
-
-5. Make a copy of the example environment variables file
-
-   On Linux systems:
-
-   ```bash
-   $ cp .env.example .env
+   $ npm start
    ```
-
-   On Windows:
-
-   ```powershell
-   $ copy .env.example .env
-   ```
-
-6. Add your [API key](https://beta.openai.com/account/api-keys) to the newly created `.env` file
-
-7. Run the app
-
-   ```bash
-   $ npm run dev
-   ```
-
-You should now be able to access the app at [http://localhost:3000](http://localhost:3000)! For the full context behind this example app, check out the [tutorial](https://beta.openai.com/docs/quickstart).
+7. To see the app running, go to [http://localhost:5173/](http://localhost:5173/)

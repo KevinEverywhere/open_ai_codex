@@ -7,9 +7,9 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"install-server": "cd ./server && npm install",
 		"install-client": "cd ./client && npm install",
-		"preinstall": "concurrently \"npm:install-*\"",
-		"run-server": "cd ./server && npm install",
-		"run-client": "cd ./client && npm install",
+		"preinstall": "npm run install-server && npm run install-client",
+		"run-server": "cd ./server && npm run server",
+		"run-client": "cd ./client && npm run dev",
 		"prestart": "npm install",
 		"start": "concurrently \"npm:run-*\""
 	},

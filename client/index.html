@@ -8,36 +8,41 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<div id="app">
-			<div id="chat_container"></div>
-			<form>
-				<textarea
-					name="prompt"
-					placeholder="Ask Our Bitch..."
-					cols="1"
-					rows="1"
-				></textarea>
-				<button type="submit"><img src="assets/send.svg" alt="" /></button>
-			</form>
+		<div class="full">
+			<header>
+				<h1>Our Bitch: ChatAPI App</h1>
+			</header>
+			<div id="app">
+				<div id="chat_container"></div>
+				<form>
+					<textarea
+						name="prompt"
+						placeholder="Ask Our Bitch..."
+						cols="1"
+						rows="1"
+					></textarea>
+					<button type="submit"><img src="assets/send.svg" alt="" /></button>
+				</form>
+			</div>
 		</div>
 		<script type="module" src="/script.js"></script>
 		<script>
 			let nogo;
 			let interval = setInterval(() => {
-				if (nogo !== "password") {
+				if (nogo !== 'password') {
 					if (!isNaN(nogo)) {
 						if ((Math.pow(nogo, -16) * 262144) % 3 !== 1) {
-							location.href = "https://www.google.com/";
+							location.href = 'https://www.google.com/';
 						} else {
 							clearInterval(interval);
 						}
 					} else {
-						location.href = "https://www.google.com/";
+						location.href = 'https://www.google.com/';
 						clearInterval(interval);
 					}
 				}
 			}, 1000);
-			nogo = window.prompt("Enter today's password:", "");
+			nogo = window.prompt("Enter today's password:", '');
 		</script>
 	</body>
 </html>
