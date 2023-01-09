@@ -17,7 +17,7 @@ This app was based on a video, [Build and Deploy Your Own ChatGPT AI App ...](ht
 3. Navigate into the project directory
 
    ```bash
-   $ cd openai-quickstart-node
+   $ cd open_ai_codex
    ```
 
 4. Create an account and API key here [OpenAI API](https://openai.com/api/)

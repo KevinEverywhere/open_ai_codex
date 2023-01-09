@@ -11,7 +11,7 @@ body {
 	background: #343541;
 }
 
-header {
+header h1 {
 	width: 100%;
 	height: 2.5em;
 	position: fixed;
@@ -19,7 +19,7 @@ header {
 	top: 0;
 	left: 0;
 	padding: 8px;
-	font: 0.9em 'Alegreya Sans', sans-serif;
+	font: 1.4em 'Alegreya Sans', sans-serif;
 	text-align: center;
 }
 
