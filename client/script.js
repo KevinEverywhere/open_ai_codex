@@ -39,6 +39,16 @@ function generateUniqueId() {
 	return `id-${timeStamp}-${hexaDecimalNumber}`;
 }
 
+function addToClickable(evt) {
+	// clipboard-read
+	navigator.clipboard.writeText(evt.target.innerHTML);
+	alert('The text has been copied to the clipboard.');
+}
+
+function addClickableEvent(elem) {
+	elem.addEventListener('click', addToClickable);
+}
+
 function chatStripe(isAi, value, uniqueid) {
 	return `
     <div class="wrapper ${isAi && 'ai'}">
@@ -98,6 +108,8 @@ const handleSubmit = async (e) => {
 		const parsedData = data.bot.trim();
 
 		typeText(messageDiv, parsedData);
+
+		addClickableEvent(messageDiv);
 	} else {
 		const err = await response.text();
 
