@@ -1,0 +1,34 @@
+{
+	"name": "our-bitch",
+	"version": "1.0.0",
+	"description": "A mulit-terminal app for running client-server chatGPT app",
+	"main": " ",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"install-server": "cd ./server && npm install",
+		"install-client": "cd ./client && npm install",
+		"preinstall": "concurrently \"npm:install-*\"",
+		"run-server": "cd ./server && npm install",
+		"run-client": "cd ./client && npm install",
+		"prestart": "npm install",
+		"start": "concurrently \"npm:run-*\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/KevinEverywhere/open_ai_codex.git"
+	},
+	"keywords": [
+		"ChatGPT",
+		"concurrently",
+		"nodeJS"
+	],
+	"author": "Kevin Ready",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/KevinEverywhere/open_ai_codex/issues"
+	},
+	"homepage": "https://github.com/KevinEverywhere/open_ai_codex#readme",
+	"devDependencies": {
+		"concurrently": "^7.6.0"
+	}
+}

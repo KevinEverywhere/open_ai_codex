@@ -74,9 +74,6 @@ const handleSubmit = async (e) => {
 
 	loader(messageDiv);
 
-	// https://our-bitch.onrender.com
-	// http://localhost:7070
-
 	const fetchUrl =
 		location.protocol === 'http'
 			? 'http://localhost:7070'
