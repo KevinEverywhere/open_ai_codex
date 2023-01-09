@@ -2,11 +2,11 @@
 
 ## What it Does:
 
-This application was built to provide me assistance to quickly achieve programming tasks. When I do not have the time or knowhow to scaffold code for specifice , I wanted to rely on an application to do this for me.
+This application was built to provide me assistance to quickly achieve programming tasks.
 
 # Implementation of a ChatGPT AI Application
 
-This app was baded on a video, [Build and Deploy Your Own ChatGPT AI App ...](https://www.youtube.com/watch?v=2FeymQoKvrk). It uses [OpenAI API](https://openai.com/api/). I later found its source code in [Adrian Hajdin's GitHub Repo](https://github.com/adrianhajdin/project_openai_codex):
+This app was based on a video, [Build and Deploy Your Own ChatGPT AI App ...](https://www.youtube.com/watch?v=2FeymQoKvrk). It uses [OpenAI API](https://openai.com/api/). The original source code is from [Adrian Hajdin's GitHub Repo](https://github.com/adrianhajdin/project_openai_codex). I added a wrapping shell and the dependency, concurrently to launch client and server apps together.
 
 ## Setup
 
