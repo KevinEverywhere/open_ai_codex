@@ -50,3 +50,7 @@ The client and server directories contain the two apps, and the .env file contai
 7. To see the app running, go to [http://localhost:5173/](http://localhost:5173/)
 
 8. The screen should look like this, and you can insert text, hit return and see the results.
+
+![demo](https://user-images.githubusercontent.com/643109/212207599-d68a7dcf-a649-4b51-849a-8bba6c0b9e4d.jpg)
+
+
