@@ -1,4 +1,4 @@
-# our-bitch, chatGPT app
+# our-bitch, A ChatGPT app
 
 ## What it Does:
 
