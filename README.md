@@ -22,16 +22,31 @@ This app was based on a video, [Build and Deploy Your Own ChatGPT AI App ...](ht
 
 4. Create an account and API key here [OpenAI API](https://openai.com/api/)
 
-5. Create .env file and assign OPENAI_API_KEY to [API key](https://beta.openai.com/account/api-keys)
+5. In the server directory, create .env file and assign OPENAI_API_KEY to [API key](https://beta.openai.com/account/api-keys)
 
 .env
 
 ```
-OPENAI_API_KEY=API_KEY
+OPENAI_API_KEY=YOUR_API_KEY
 ```
 
-6. When you run npm start, the application first installs dependencies and then starts the client and server apps.
+Your directory structure should look like this:
+
+```
+open_ai_codex
+├── client
+├── server
+│   ├── .env
+├── package.json
+└── README.md
+```
+
+The client and server directories contain the two apps, and the .env file contains the API key.
+
+6. The package.json file contains a script to start both apps. First the dependencies are installed and then the client and server apps are started.
    ```
    $ npm start
    ```
 7. To see the app running, go to [http://localhost:5173/](http://localhost:5173/)
+
+8. The screen should look like this, and you can insert text, hit return and see the results.
