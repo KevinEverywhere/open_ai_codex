@@ -85,9 +85,11 @@ const handleSubmit = async (e) => {
 	loader(messageDiv);
 
 	const fetchUrl =
-		location.protocol === 'http'
+		location.protocol === 'http:'
 			? 'http://localhost:7070'
 			: 'https://our-bitch.onrender.com';
+
+	console.log(fetchUrl, location.protocol);
 
 	const response = await fetch(fetchUrl, {
 		method: 'POST',
@@ -103,6 +105,8 @@ const handleSubmit = async (e) => {
 
 	messageDiv.innerHTML = '';
 
+	console.log(response);
+
 	if (response.ok) {
 		const data = await response.json();
 		const parsedData = data.bot.trim();
@@ -111,11 +115,21 @@ const handleSubmit = async (e) => {
 
 		addClickableEvent(messageDiv);
 	} else {
-		const err = await response.text();
+		if (response.status === 500) {
+			messageDiv.innerHTML = `
+				You may be missing your OPENAI_API_KEY definition in your 
+				./server/.env file. Once this has been correctly set, restart the app.\n\n
+				Please go to OpenAI and obtain an api-key and follow the directions in the
+				ReadMe file. <a class='whitelink' href='https://beta.openai.com/account/api-keys'>OpenAI ApiKeys</a>.
+				
+			`;
+		} else {
+			const err = await response.text();
 
-		messageDiv.innerHTML = 'Something went wrong';
+			messageDiv.innerHTML = 'Something went wrong';
 
-		alert(err);
+			console.log(err);
+		}
 	}
 };
 

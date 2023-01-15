@@ -7,6 +7,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"install-server": "cd ./server && npm install",
 		"install-client": "cd ./client && npm install",
+		"postinstall": "cd ./server && touch .env",
 		"preinstall": "npm run install-server && npm run install-client",
 		"run-server": "cd ./server && npm run server",
 		"run-client": "cd ./client && npm run dev",

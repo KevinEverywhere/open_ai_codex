@@ -57,6 +57,24 @@ header h1 {
 	scroll-behavior: smooth;
 }
 
+.directions {
+	font-family: 'Alegreya Sans', sans-serif;
+	color: #dcdcdc;
+	font-size: 20px;
+}
+
+.whitelink:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.whitelink {
+	font-family: 'Alegreya Sans', sans-serif;
+	color: #fcdcdc;
+	font-size: 20px;
+	text-decoration: none;
+}
+
 /* hides scrollbar */
 #chat_container::-webkit-scrollbar {
 	display: none;
