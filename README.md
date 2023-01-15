@@ -79,7 +79,3 @@ If you are having installation problems, make sure that you have [nodeJS install
 ## Disclaimer
 
 My part in creating this app was following a tutorial, making some edits, adding a library to enable both apps to be launched at the same time, adding the copy-to-clipboard feature, and giving visual feedback to guide users.
-
-```
-
-```
