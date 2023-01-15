@@ -89,8 +89,6 @@ const handleSubmit = async (e) => {
 			? 'http://localhost:7070'
 			: 'https://our-bitch.onrender.com';
 
-	console.log(fetchUrl, location.protocol);
-
 	const response = await fetch(fetchUrl, {
 		method: 'POST',
 		headers: {
@@ -104,8 +102,6 @@ const handleSubmit = async (e) => {
 	clearInterval(loadInterval);
 
 	messageDiv.innerHTML = '';
-
-	console.log(response);
 
 	if (response.ok) {
 		const data = await response.json();
@@ -125,10 +121,8 @@ const handleSubmit = async (e) => {
 			`;
 		} else {
 			const err = await response.text();
-
 			messageDiv.innerHTML = 'Something went wrong';
-
-			console.log(err);
+			// ToDo: save err if needed
 		}
 	}
 };
