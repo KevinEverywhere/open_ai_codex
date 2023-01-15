@@ -72,11 +72,14 @@ The most typical problem will be not having the OPENAI_API_KEY present in the .e
 
 ```
 OPENAI_API_KEY=YOUR_OWN_API_KEY
-``
+```
+
 If you are having installation problems, make sure that you have [nodeJS installed](https://nodejs.org/). Additional information can be found at [Adrian Hajdin's GitHub Repo](https://github.com/adrianhajdin/project_openai_codex) who authored the principal code and [video](https://www.youtube.com/watch?v=2FeymQoKvrk) that I followed to create this app.
 
 ## Disclaimer
 
 My part in creating this app was following a tutorial, making some edits, adding a library to enable both apps to be launched at the same time, adding the copy-to-clipboard feature, and giving visual feedback to guide users.
+
+```
 
 ```
